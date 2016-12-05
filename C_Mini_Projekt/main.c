@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Prototypes.h"
 
 #define MAX 7
 
@@ -15,6 +16,7 @@ int intArray[MAX] = {4,6,3,2,1,9,7};
 
 int main(int argc, char **argv)
 {
+
 	printf("Input Array: ");
 	   display();
 	   printline(50);

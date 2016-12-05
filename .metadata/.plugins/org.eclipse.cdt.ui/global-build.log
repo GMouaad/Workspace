@@ -1,0 +1,21 @@
+09:34:13 **** Build of configuration Debug for project C_Mini_Projekt ****
+make all 
+Building file: ../functions.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"functions.d" -MT"functions.o" -o "functions.o" "../functions.c"
+Finished building: ../functions.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: C_Mini_Projekt
+Invoking: MacOS X C Linker
+gcc  -o "C_Mini_Projekt"  ./functions.o ./main.o   
+duplicate symbol _intArray in:
+    ./functions.o
+    ./main.o
+ld: 1 duplicate symbol for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [C_Mini_Projekt] Error 1

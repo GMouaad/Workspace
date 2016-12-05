@@ -5,6 +5,7 @@
  *      Author: MouaadGssair
  */
 
+#include <stdio.h>
 #define MAX 7
 
 int intArray[MAX] = {4,6,3,2,1,9,7};
@@ -15,21 +16,26 @@ void printline(int count) {
 
    for(i = 0;i <count-1;i++) {
       printf("=");
+	  fflush(stdout);
    }
 
    printf("=\n");
+   fflush(stdout);
 }
 // Ausgabe des Arrays "intArray" aufm Monitor
 void display() {
    int i;
    printf("[");
+   fflush(stdout);
 
    // navigate through all items
    for(i = 0;i<MAX;i++) {
       printf("%d ",intArray[i]);
+	  fflush(stdout);
    }
 
    printf("]\n");
+   fflush(stdout);
 }
 // Zum Umtauschen von Werten zwichen 2 Variablen
 void swap(int num1, int num2) {
@@ -42,7 +48,7 @@ int partition(int left, int right, int pivot) {
    int leftPointer = left -1;
    int rightPointer = right;
 
-   while(true) {
+   while(1) {
       while(intArray[++leftPointer] < pivot) {
          //do nothing
       }
@@ -55,13 +61,16 @@ int partition(int left, int right, int pivot) {
          break;
       } else {
          printf(" item swapped :%d,%d\n", intArray[leftPointer],intArray[rightPointer]);
+		 fflush(stdout);
          swap(leftPointer,rightPointer);
       }
    }
 
    printf(" pivot swapped :%d,%d\n", intArray[leftPointer],intArray[right]);
+   fflush(stdout);
    swap(leftPointer,right);
    printf("Updated Array: ");
+   fflush(stdout);
    display();
    return leftPointer;
 }
